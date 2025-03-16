@@ -1,5 +1,11 @@
-variable "proxmox_url" {
-  type = string                     # The type of the variable, in this case a string
-  default = "https://proxmox-server01.example.com:8006/api2/json"
-  description = "Proxmox URL"
+variable "proxmox" {
+  type = object({
+    name         = string
+    cluster_name = string
+    endpoint     = string
+    insecure     = bool
+    username     = string
+    api_token    = string
+  })
+  sensitive = true
 }
