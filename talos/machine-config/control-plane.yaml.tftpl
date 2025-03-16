@@ -1,5 +1,8 @@
 # tofu/talos/machine-config/control-plane.yaml.tftpl
 machine:
+  kubelet:
+    extraArgs:
+      rotate-server-certificates: true
   network:
     hostname: ${hostname}
   nodeLabels:

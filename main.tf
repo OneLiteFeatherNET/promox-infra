@@ -20,7 +20,7 @@ module "talos" {
     endpoint        = "10.200.4.100"
     gateway         = "10.200.4.1"
     talos_version   = "v1.9.5"
-    proxmox_cluster = "hetzner-hel"
+    proxmox_cluster = "entenhausen"
   }
 
   nodes = {
