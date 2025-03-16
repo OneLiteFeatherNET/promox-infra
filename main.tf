@@ -74,7 +74,7 @@ module "talos" {
     "track" = {
       host_node     = "pve-01"
       machine_type  = "worker"
-      ip            = "10.200.4.51"
+      ip            = "10.200.4.52"
       mac_address   = "BC:24:11:2E:08:02"
       vm_id         = 812
       cpu           = 8
@@ -82,3 +82,16 @@ module "talos" {
     }
   }
 }
+
+module "proxmox_csi_plugin" {
+  depends_on = [module.talos]
+  source = "./bootstrap/proxmox-csi-plugin"
+
+  providers = {
+    proxmox    = proxmox
+    kubernetes = kubernetes
+  }
+
+  proxmox = var.proxmox
+}
+
