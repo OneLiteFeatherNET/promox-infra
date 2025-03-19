@@ -9,3 +9,14 @@ variable "proxmox" {
   })
   sensitive = true
 }
+
+variable "oidc" {
+  type = object({
+    client_id   = string
+    groups_claim = string
+    groups_prefix = string
+    issuer_url  = string
+    username_claim = string
+  })
+  sensitive = true
+}

@@ -20,6 +20,11 @@ variable "cluster" {
     gateway         = string
     talos_version   = string
     proxmox_cluster = string
+    oidc_client_id   = string
+    oidc_groups_claim = string
+    oidc_groups_prefix = string
+    oidc_issuer_url  = string
+    oidc_username_claim = string
   })
 }
 

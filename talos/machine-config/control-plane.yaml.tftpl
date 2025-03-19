@@ -16,6 +16,14 @@ cluster:
       name: none
   proxy:
     disabled: true
+  apiServer:
+    extraArgs:
+        oidc-client-id: "${oidc_client_id}"
+        oidc-username-claim: "${oidc_username_claim}"
+        oidc-groups-claim: "${oidc_groups_claim}"
+        oidc-groups-prefix: "${oidc_groups_prefix}"
+        oidc-issuer-url: "${oidc_issuer_url}"
+        oidc-username-prefix: "oidc:"
   # Optional Gateway API CRDs
 #  extraManifests:
 #  - https://raw.githubusercontent.com/kubernetes-sigs/gateway-api/v1.1.0/config/crd/standard/gateway.networking.k8s.io_gatewayclasses.yaml
