@@ -38,6 +38,9 @@ data "talos_machine_configuration" "this" {
       hostname     = each.key
       node_name    = each.value.host_node
       cluster_name = var.cluster.proxmox_cluster
+      cloudflared_token = var.cloudflared.token
+      cloudflared_metrics = var.cloudflared.metrics
+      cloudflared_edge_ip_version = var.cloudflared.edge_ip
     })
   ]
 }
