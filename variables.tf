@@ -20,3 +20,12 @@ variable "oidc" {
   })
   sensitive = true
 }
+variable "cloudflared" {
+  description = "Cloudflared configuration"
+  type = object({
+    token   = string
+    metrics = string
+    edge_ip = string
+  })
+  sensitive = true
+}

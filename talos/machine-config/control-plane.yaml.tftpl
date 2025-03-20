@@ -47,3 +47,11 @@ cluster:
   - name: cilium-bootstrap
     contents: |
       ${indent(6, cilium_install)}
+---
+apiVersion: v1alpha1
+kind: ExtensionServiceConfig
+name: cloudflared
+environment:
+  - TUNNEL_TOKEN=${cloudflared_token}
+  - TUNNEL_METRICS=${cloudflared_metrics}
+  - TUNNEL_EDGE_IP_VERSION=${cloudflared_edge_ip_version}

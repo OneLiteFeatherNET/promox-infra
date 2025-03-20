@@ -20,12 +20,27 @@ variable "cluster" {
     gateway         = string
     talos_version   = string
     proxmox_cluster = string
-    oidc_client_id   = string
-    oidc_groups_claim = string
-    oidc_groups_prefix = string
-    oidc_issuer_url  = string
-    oidc_username_claim = string
   })
+}
+
+variable "oidc" {
+    description = "OIDC configuration"
+    type = object({
+        client_id   = string
+        groups_claim = string
+        groups_prefix = string
+        issuer_url  = string
+        username_claim = string
+    })
+}
+
+variable "cloudflared" {
+    description = "Cloudflared configuration"
+    type = object({
+        token   = string
+        metrics = string
+        edge_ip = string
+    })
 }
 
 variable "nodes" {

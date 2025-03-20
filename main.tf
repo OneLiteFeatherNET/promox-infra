@@ -21,12 +21,20 @@ module "talos" {
     gateway         = "10.200.4.1"
     talos_version   = "v1.9.5"
     proxmox_cluster = "entenhausen"
+  }
 
-    oidc_client_id   = var.oidc.client_id
-    oidc_groups_claim = var.oidc.groups_claim
-    oidc_groups_prefix = var.oidc.groups_prefix
-    oidc_issuer_url  = var.oidc.issuer_url
-    oidc_username_claim = var.oidc.username_claim
+  oidc = {
+    client_id   = var.oidc.client_id
+    groups_claim = var.oidc.groups_claim
+    groups_prefix = var.oidc.groups_prefix
+    issuer_url  = var.oidc.issuer_url
+    username_claim = var.oidc.username_claim
+  }
+
+  cloudflared = {
+    token   = var.cloudflared.token
+    metrics = var.cloudflared.metrics
+    edge_ip = var.cloudflared.edge_ip
   }
 
   nodes = {

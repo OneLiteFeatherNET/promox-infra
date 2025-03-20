@@ -24,11 +24,14 @@ data "talos_machine_configuration" "this" {
       cluster_name   = var.cluster.proxmox_cluster
       cilium_values  = var.cilium.values
       cilium_install = var.cilium.install
-      oidc_client_id = var.cluster.oidc_client_id
-      oidc_groups_claim = var.cluster.oidc_groups_claim
-      oidc_groups_prefix = var.cluster.oidc_groups_prefix
-      oidc_issuer_url = var.cluster.oidc_issuer_url
-      oidc_username_claim = var.cluster.oidc_username_claim
+      oidc_client_id = var.oidc.client_id
+      oidc_groups_claim = var.oidc.groups_claim
+      oidc_groups_prefix = var.oidc.groups_prefix
+      oidc_issuer_url = var.oidc.issuer_url
+      oidc_username_claim = var.oidc.username_claim
+      cloudflared_token = var.cloudflared.token
+      cloudflared_metrics = var.cloudflared.metrics
+      cloudflared_edge_ip_version = var.cloudflared.edge_ip
     })
   ] : [
     templatefile("${path.module}/machine-config/worker.yaml.tftpl", {
