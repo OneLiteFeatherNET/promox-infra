@@ -72,7 +72,7 @@ module "talos" {
       mac_address   = "BC:24:11:2E:08:00"
       vm_id         = 810
       cpu           = 8
-      ram_dedicated = 4096
+      ram_dedicated = 8192
     }
 
     "trick" = {
