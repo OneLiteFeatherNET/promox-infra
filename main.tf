@@ -99,8 +99,18 @@ module "talos" {
       host_node     = "pve-01"
       machine_type  = "worker"
       ip            = "10.200.4.53"
-      mac_address   = "BC:24:11:2E:08:04"
+      mac_address   = "BC:24:11:2E:08:03"
       vm_id         = 813
+      cpu           = 4
+      ram_dedicated = 4096
+    }
+
+    "dussel" = {
+      host_node     = "pve-01"
+      machine_type  = "worker"
+      ip            = "10.200.4.54"
+      mac_address   = "BC:24:11:2E:08:04"
+      vm_id         = 814
       cpu           = 4
       ram_dedicated = 4096
     }
