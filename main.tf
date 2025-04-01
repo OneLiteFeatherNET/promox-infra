@@ -94,6 +94,16 @@ module "talos" {
       cpu           = 8
       ram_dedicated = 4096
     }
+
+    "daisy" = {
+      host_node     = "pve-01"
+      machine_type  = "worker"
+      ip            = "10.200.4.53"
+      mac_address   = "BC:24:11:2E:08:04"
+      vm_id         = 813
+      cpu           = 4
+      ram_dedicated = 4096
+    }
   }
 }
 
