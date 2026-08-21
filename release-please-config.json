@@ -8,5 +8,6 @@
       "package-name": "promox-infra",
       "changelog-path": "CHANGELOG.md"
     }
-  }
+  },
+  "bootstrap-sha": "ef74ccd809ffa3af7ba13fb591b114e4cdd54c7f"
 }
