@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "simple",
+  "include-component-in-tag": false,
+  "include-v-in-tag": true,
+  "packages": {
+    ".": {
+      "package-name": "promox-infra",
+      "changelog-path": "CHANGELOG.md"
+    }
+  },
+  "bootstrap-sha": "ef74ccd809ffa3af7ba13fb591b114e4cdd54c7f"
+}
